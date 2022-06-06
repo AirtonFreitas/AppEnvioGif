@@ -1,4 +1,4 @@
-import 'package:envio_gif/pages/create_widget_screen.dart';
+import 'package:envio_gif/pages/components/create_widget_screen.dart';
 import 'package:flutter/material.dart';
 import 'title_home_screen.dart';
 import '../repositories/giphy_repository.dart';
@@ -23,6 +23,7 @@ class _HomeAppState extends State<HomeAppGifs> {
     return Scaffold(
         appBar: AppBar(
           title: Text('Envio GIPHY'),
+
         ),
         body: Column(children: [
           SizedBox(height: 20),

@@ -32,7 +32,7 @@ dependencies:
 
   http: ^0.13.4
   mobx: ^2.0.5
-  share: ^0.6.1+1
+  share_plus: ^4.0.6
 
 
 

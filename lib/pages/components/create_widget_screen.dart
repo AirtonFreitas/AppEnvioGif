@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:share/share.dart';
+import 'package:share_plus/share_plus.dart';
 
 class CreateGif extends StatelessWidget {
   @override
@@ -15,28 +15,29 @@ class CreateGif extends StatelessWidget {
         itemBuilder: (context, index) {
           return GestureDetector(
               child: Stack(children: <Widget>[
-                FadeInImage.assetNetwork(
-                  image: snapshot.data['data'][index]['images']['fixed_height']
+                Image.network(
+                  snapshot.data['data'][index]['images']['fixed_height']
                   ['url'],
                   height: 200,
                   fit: BoxFit.cover,
-                  placeholder: '',
-                ),Row(
+                ), Row(
                   children: [
                     IconButton(
-                        icon: Icon(Icons.share),iconSize: 30,
-                        onPressed: () { Share.share(snapshot.data['data'][index]['images']
-                        ['fixed_height']['url']);}
+                        icon: Icon(Icons.share), iconSize: 30,
+                        onPressed: () {
+                          Share.share(snapshot.data['data'][index]['images']
+                          ['fixed_height']['url']);
+                        }
                     ),
                     IconButton(
-                  icon: Icon(Icons.local_fire_department_outlined, color: Colors.white,
-                  ),iconSize: 30,
-                  onPressed: (){
-                  },
-                ),
+                      icon: Icon(Icons.local_fire_department_outlined,
+                        color: Colors.white,
+                      ), iconSize: 30,
+                      onPressed: () {},
+                    ),
                   ],
                 ),
-          ]));
+              ]));
         });
   }
 
